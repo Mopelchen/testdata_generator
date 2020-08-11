@@ -34,7 +34,7 @@ data? Something like the following:
 | other objects of your model   | A correctly initialized instance of that type |
 
 To make things a little bit more interesting, make sure, that the test data generator only operates on your model classes. 
-Any other classes you either by ignored or cause a Runtime Exception of your choosing.
+Any other classes would either be ignored or cause a Runtime Exception of your choosing.
 
 To top it off, imagine that some fields may have some restrictions on them regarding
 - minimal lengths
