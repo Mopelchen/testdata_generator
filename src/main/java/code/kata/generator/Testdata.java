@@ -23,7 +23,7 @@ public class Testdata {
 
             Class<?> parameterType = method.getParameterTypes()[0];
 
-            if(parameterType.equals(Integer.class)) {
+            if(parameterType.equals(Integer.class) || parameterType.equals(int.class)) {
                 method.invoke(testdata, Integer.MAX_VALUE);
             }
         }

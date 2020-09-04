@@ -1,9 +1,8 @@
 package code.kata.generator;
 
-import code.kata.model.Person;
+import code.kata.model.IntClass;
+import code.kata.model.IntegerClass;
 import org.junit.Test;
-
-import java.lang.reflect.InvocationTargetException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -12,12 +11,21 @@ public class TestdataTest {
     private Testdata underTest = new Testdata();
 
     @Test
-    public void test_generate() throws Exception {
+    public void test_generate_givenClassWithIntegerField_setFieldToINT_MAX() throws Exception {
 
-        Person p = underTest.generate(Person.class);
+        IntegerClass p = underTest.generate(IntegerClass.class);
 
         assertThat(p).isNotNull();
-        assertThat(p.getAge()).isEqualTo(Integer.MAX_VALUE);
+        assertThat(p.getIntegerField()).isEqualTo(Integer.MAX_VALUE);
+    }
+
+    @Test
+    public void test_generate_givenClassWithIntField_setFieldToINT_MAX() throws Exception {
+
+        IntClass p = underTest.generate(IntClass.class);
+
+        assertThat(p).isNotNull();
+        assertThat(p.getIntField()).isEqualTo(Integer.MAX_VALUE);
     }
 
 }
