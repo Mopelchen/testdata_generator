@@ -30,7 +30,8 @@ data? Something like the following:
 | char/Character                | '\u0000' / '\uffff'                       |
 | String                        | The fully qualifying name of the field    |
 | Enum                          | First value of that enum                  |
-| Collection                    | A collection of the specified type with a single item of the correct type initialized as detailed in this table (have fun with this one!) | 
+| Collection                    | A collection of the specified type with a single item of the correct type initialized as detailed in this table | 
+| Map                           | A map with correctly initialized key and value. | 
 | other objects of your model   | A correctly initialized instance of that type |
 
 To make things a little bit more interesting, make sure, that the test data generator only operates on your model classes. 
